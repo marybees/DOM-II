@@ -1,22 +1,8 @@
-// Your code goes here
-// mouseover
-// keydown
-// wheel
-// load
-// focus
-// resize
-// scroll
-// select
-// dblclick
-// drag / drop
-
 // 1.) mouseover
 
 const navBar = document.querySelector("nav");
 
-navBar.addEventListener(
-  "mouseover",
-  (event) => {
+navBar.addEventListener("mouseover",(event) => {
     event.target.style.color = "red";
     setTimeout(function () {
       event.target.style.color = "";
@@ -36,7 +22,7 @@ introImage.addEventListener("mouseleave", function () {
 // 3.) mouseenter
 
 introImage.addEventListener("mouseenter", function () {
-  console.log("Your mouse is over the bus." + Date.now());
+  console.log("Your mouse is over the bus.");
   introImage.style.height = "300px";
 });
 
@@ -74,7 +60,7 @@ headersArray.forEach((element) => {
 const logo = document.querySelector(".logo-heading");
 
 document.addEventListener("keydown", (event) => {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13) { //enter
         logo.style.color = "red";
     }
 });
@@ -82,15 +68,15 @@ document.addEventListener("keydown", (event) => {
 // 8.) keyup
 
 document.addEventListener("keyup", (event) => {
-    if (event.keyCode === 8) {
+    if (event.keyCode === 8) { //backspace
         logo.style.color = "black";
     }
 });
 
-// 9.) keypress
+// 9.) wheel
 
-document.addEventListener("keyup", (event) => {
-    if (event.keyCode === 8) {
-        logo.style.color = "black";
-    }
+const signUpButton = document.querySelector(".btn")
+
+signUpButton.addEventListener("wheel", () => {
+    signUpButton.style.opacity = ".5";
 });
