@@ -30,14 +30,14 @@ navBar.addEventListener(
 const introImage = document.querySelector(".intro img");
 
 introImage.addEventListener("mouseleave", function () {
-  introImage.style.transform = "scale (1)";
+    introImage.style.height = "250px";
 });
 
 // 3.) mouseenter
 
 introImage.addEventListener("mouseenter", function () {
   console.log("Your mouse is over the bus." + Date.now());
-  introImage.style.transform = "scale (1.2)";
+  introImage.style.height = "300px";
 });
 
 // 4.) load
@@ -57,48 +57,40 @@ destinations.forEach((element) => {
   });
 });
 
-//keydown
+// 6.) dblclick
+const headers = document.querySelectorAll("h2");
 
-// let photos = document.querySelectorAll("img");
+const headersArray = Array.from(headers);
 
-// photos.addEventListener("keydown", (event) => {
-//     if (event.keyCode === 13) {
-//         return;
-//     }
-//     event.target.style.visibility = "hidden";
-// });
+headersArray.forEach((element) => {
+    element.addEventListener("dblclick", () => {
+        element.style.backgroundColor = "black";
+        element.style.color = "white";
+    });
+});
 
-//onwheel
+// 7.) keydown
 
-// function zoom(event) {
-//     event.preventDefault();
-//     scale += event.deltaY * -0.01;
-//     scale = Math.min(Math.max(.125, scale), 4);
-//     introSection.style.transform = `scale(${scale})`;
-// }
-// let introSection = document.querySelector("intro");
-// let scale = 1;
-// introSection.onwheel = zoom;
+const logo = document.querySelector(".logo-heading");
 
-//resize
+document.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+        logo.style.color = "red";
+    }
+});
 
-// const imageHeight = document.querySelector('img');
-// const imageWidth = document.querySelector('img');
+// 8.) keyup
 
-// function reportWindowSize() {
-//   imageHeight.textContent = window.innerHeight;
-//   imageWidth.textContent = window.innerWidth;
-// }
+document.addEventListener("keyup", (event) => {
+    if (event.keyCode === 8) {
+        logo.style.color = "black";
+    }
+});
 
-// window.addEventListener('resize', reportWindowSize);
+// 9.) keypress
 
-//dblclick
-
-// introduction.addEventListener('dblclick', function (e) {
-//   introduction.classList.toggle('large');
-// });
-
-//drag and drop
-
-// "text-msContent"
-// "img-content"
+document.addEventListener("keyup", (event) => {
+    if (event.keyCode === 8) {
+        logo.style.color = "black";
+    }
+});
