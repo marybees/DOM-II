@@ -80,3 +80,5 @@ const signUpButton = document.querySelector(".btn")
 signUpButton.addEventListener("wheel", () => {
     signUpButton.style.opacity = ".5";
 });
+
+// 10.) resize
