@@ -82,3 +82,7 @@ signUpButton.addEventListener("wheel", () => {
 });
 
 // 10.) resize
+introImage
+window.addEventListener("resize", () => {
+    introImage.src = "https://images.unsplash.com/photo-1596021758839-70c4be7dd98b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80"
+});
